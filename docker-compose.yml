@@ -1,7 +1,7 @@
 version: "3.9"
 services:
     # image project
-    nome:
+    jobers:
         build:
             args:
                 user: jo316dev
@@ -41,7 +41,7 @@ services:
             MYSQL_PASSWORD: ${DB_PASSWORD}
             MYSQL_USER: ${DB_USERNAME}
         volumes:
-            - ./.docker/mysql/dbdata:/var/lib/mysql
+            - ./data_db/.docker/mysql/dbdata:/var/lib/mysql
         ports:
             - 3388:3306
         networks:
